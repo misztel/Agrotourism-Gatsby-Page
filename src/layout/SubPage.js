@@ -22,23 +22,25 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyledWrapper = styled.div`
-  height: 100vh;
-  display: flex;
+  height: 400px;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-size: cover;
+  display: flex;
   background-image: url(${herobg});
+  background-size: cover;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 500px inset;
+  background-position-y: 50%;
   color: ${colors.primary};
 `;
 
-const Layout = ({ children }) => (
+const SubPageLayout = ({ children }) => (
   <>
     <GlobalStyle />
     <StyledWrapper>{children}</StyledWrapper>
   </>
 );
 
-export default Layout;
+export default SubPageLayout;

@@ -9,6 +9,7 @@ import Column from '../components/Column/Column';
 import Paragraph from '../components/Paragraph/Paragraph';
 import Container from '../components/Container/Container';
 import Widok from '../assets/images/widok.jpg';
+import Footer from '../components/Footer/Footer';
 
 const IndexPage = () => (
   <>
@@ -29,7 +30,7 @@ const IndexPage = () => (
       </Row>
     </Layout>
     <Row>
-      <Container>
+      <Container addmarg>
         <Column xs="12" sm="12" md="6" lg="6">
           <img src={Widok} alt="zachód słońca nad jeziorem" />
         </Column>
@@ -44,6 +45,23 @@ const IndexPage = () => (
         </Column>
       </Container>
     </Row>
+    <Row>
+      <Container addmarg>
+        <Column xs="12" sm="12" md="6" lg="6">
+          <H2>Zacisze Nad Wodą</H2>
+          <Paragraph dark>
+            Nasze gospodarstwo agroturystyczne znajduję się w urokliwym miejscu
+            na skraju Borów Tucholskich. Położone przy jeziorze Świekatowskim z
+            wieloma atrakcjami na naszym terenie i w okolicy.
+          </Paragraph>
+          <Button secondary>Więcej</Button>
+        </Column>
+        <Column xs="12" sm="12" md="6" lg="6">
+          <img src={Widok} alt="zachód słońca nad jeziorem" />
+        </Column>
+      </Container>
+    </Row>
+    <Footer />
   </>
 );
 

@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import Hamburger from '../Hamburger/Hamburger';
 import Logo from '../Logo/Logo';
 import Menu from '../Menu/Menu';
+import MenuDesktop from '../Menu/MenuDesktop';
+import Row from '../Row/Row';
+import Column from '../Column/Column';
+import Container from '../Container/Container';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -23,9 +27,18 @@ const Header = () => {
 
   return (
     <StyledWrapper>
-      <Logo />
-      <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
-      <Menu isOpen={isMenuOpen} />
+      <Row>
+        <Container push>
+          <Column xs="4" md="3">
+            <Logo />
+          </Column>
+          <Column xs="1" md="9">
+            <MenuDesktop />
+            <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
+            <Menu isOpen={isMenuOpen} />
+          </Column>
+        </Container>
+      </Row>
     </StyledWrapper>
   );
 };

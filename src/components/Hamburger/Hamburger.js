@@ -5,10 +5,16 @@ import { colors } from '../../utils/colors';
 
 const StyledHamburger = styled.button`
   padding: 18px;
+  margin: 14px;
   border: none;
   position: relative;
   background: none;
   z-index: 9999;
+  cursor: pointer;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 const InnerHamburger = styled.div`

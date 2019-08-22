@@ -4,7 +4,7 @@ import { colors } from '../../utils/colors';
 const Button = styled.button`
   font-size: 1em;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 500;
   border: 2px ${colors.primary} solid;
   padding: 0.25rem 0.95rem;
   border-radius: 1.2rem;

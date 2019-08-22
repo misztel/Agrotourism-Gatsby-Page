@@ -10,14 +10,14 @@ import Column from '../components/Column/Column';
 import Container from '../components/Container/Container';
 import Gallery from '../components/Galeria/Galeria';
 
-const GaleryPage = () => (
+const KontaktPage = () => (
   <>
     <SubPageLayout>
       <Header />
       <Row>
         <Container>
           <Column nopadd xs="12">
-            <H1 centred>Galeria</H1>
+            <H1 centred>Kontakt</H1>
           </Column>
         </Container>
       </Row>
@@ -26,4 +26,4 @@ const GaleryPage = () => (
   </>
 );
 
-export default GaleryPage;
+export default KontaktPage;

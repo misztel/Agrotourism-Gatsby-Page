@@ -5,8 +5,9 @@ const H1 = styled.h1`
   position: relative;
   font-weight: 800;
   font-size: 30px;
-  margin-top: 0.5rem;
   color: ${colors.white};
+  display: ${props => (props.centred ? 'flex' : 'block')};
+  justify-content: ${props => (props.centred ? 'center' : 'left')};
 
   ::before {
     content: '';

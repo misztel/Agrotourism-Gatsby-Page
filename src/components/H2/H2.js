@@ -6,14 +6,16 @@ const H2 = styled.h2`
   font-weight: 600;
   font-size: 2rem;
   margin-top: 2rem;
-  color: ${colors.dark};
+  display: ${props => (props.centred ? 'flex' : 'block')};
+  justify-content: ${props => (props.centred ? 'center' : 'left')};
+  color: ${props => (props.white ? colors.white : colors.dark)};
 
   ::before {
     content: '';
     position: absolute;
     width: 60px;
     height: 2px;
-    background-color: ${colors.primary};
+    background-color: ${props => (props.white ? colors.dark : colors.primaty)};
     top: 45px;
   }
 `;

@@ -8,6 +8,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-responsive-iframe`],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-root-import',
       options: {
         assets: path.join(__dirname, 'src/assets'),

@@ -8,6 +8,7 @@ import Row from '../components/Row/Row';
 import Column from '../components/Column/Column';
 import Paragraph from '../components/Paragraph/Paragraph';
 import Container from '../components/Container/Container';
+import Footer from '../components/Footer/Footer';
 
 const OnasPage = () => (
   <>
@@ -26,14 +27,27 @@ const OnasPage = () => (
         <Column nopadd xs="12">
           <H2>Położenie</H2>
           <Paragraph dark>
-            Nasze gospodarstwo agroturystyczne znajduje się w gminie i wsi
-            Świekatowo niedalego, bo ok. 30 km od Świecia. Gospodarstwo położone
-            jest w malowniczej scenerii na skraju Borów Tucholskich i w pobliżu
-            dużego jeziora świekatowskiego. bogatego w różne gatunki ryb.
-            Kilkaset metrów od gospodarstwa znajduje się plaża gdzie można kąpać
-            się i zadbać w słońcu o piękny kolor swojego ciała. Wszystko jest
-            otoczone z jednej strony ładnymi lasami.
+            Nasze gospodarstwo położone jest na skraju Borów Tucholskich, teren
+            rozciąga się nad samym brzegiem jeziora otoczonego lasem. Nad
+            jeziorem znajduje się plaża z kąpieliskiem.
           </Paragraph>
+        </Column>
+      </Container>
+    </Row>
+    <Row>
+      <Container addmarg>
+        <Column nopadd xs="12">
+          <div className="videoWrapper">
+            <iframe
+              title="Film promujący Świekatowo"
+              width="1492"
+              height="849"
+              src="https://www.youtube.com/embed/alEl2oV3DvA"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </Column>
       </Container>
     </Row>
@@ -42,33 +56,17 @@ const OnasPage = () => (
         <Column nopadd xs="12">
           <H2>Do dyspzycji Gości</H2>
           <Paragraph dark>
-            Nasze gospodarstwo agroturystyczne znajduje się w gminie i wsi
-            Świekatowo niedalego, bo ok. 30 km od Świecia. Gospodarstwo położone
-            jest w malowniczej scenerii na skraju Borów Tucholskich i w pobliżu
-            dużego jeziora świekatowskiego. bogatego w różne gatunki ryb.
-            Kilkaset metrów od gospodarstwa znajduje się plaża gdzie można kąpać
-            się i zadbać w słońcu o piękny kolor swojego ciała. Wszystko jest
-            otoczone z jednej strony ładnymi lasami.
+            Do dyspozycji wczasowiczów oddajemy cały wolnostojący dom. W domu
+            gościnnym znajdują się 4 pokoje: dwa czteroosobowe oraz jeden
+            dwuosobowe. W każdym pokoju znajduje się łazienka z ubikacją i
+            prysznicem. Goście mogą korzystać z aneksu kuchennego, sauny oraz
+            dużej sali. Obok domku (od strony jeziora) znajduje się miejsce do
+            grillowania, na ognisko, plac zabaw i pomost.
           </Paragraph>
         </Column>
       </Container>
     </Row>
-    <Row>
-      <Container addmarg>
-        <Column nopadd xs="12">
-          <H2>Atrakcje</H2>
-          <Paragraph dark>
-            Nasze gospodarstwo agroturystyczne znajduje się w gminie i wsi
-            Świekatowo niedalego, bo ok. 30 km od Świecia. Gospodarstwo położone
-            jest w malowniczej scenerii na skraju Borów Tucholskich i w pobliżu
-            dużego jeziora świekatowskiego. bogatego w różne gatunki ryb.
-            Kilkaset metrów od gospodarstwa znajduje się plaża gdzie można kąpać
-            się i zadbać w słońcu o piękny kolor swojego ciała. Wszystko jest
-            otoczone z jednej strony ładnymi lasami.
-          </Paragraph>
-        </Column>
-      </Container>
-    </Row>
+    <Footer />
   </>
 );
 

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { colors } from '../../utils/colors';
 
 const StyledHamburger = styled.button`
-  padding: 18px;
-  margin: 14px;
+  padding: 18px 0px;
+  margin: 11px 0px;
   border: none;
   position: relative;
   background: none;

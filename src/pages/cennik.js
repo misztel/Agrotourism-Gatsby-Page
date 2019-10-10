@@ -8,7 +8,8 @@ import Row from '../components/Row/Row';
 import Column from '../components/Column/Column';
 // import Paragraph from '../components/Paragraph/Paragraph';
 import Container from '../components/Container/Container';
-import Gallery from '../components/Galeria/Galeria';
+import Pricing from '../components/Pricing/Pricing';
+import Footer from '../components/Footer/Footer';
 
 const CennikPage = () => (
   <>
@@ -22,7 +23,8 @@ const CennikPage = () => (
         </Container>
       </Row>
     </SubPageLayout>
-    <Gallery />
+    <Pricing />
+    <Footer />
   </>
 );
 

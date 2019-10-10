@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { Dialog } from '@reach/dialog';
 import Column from '../Column/Column';
+import { colors } from '../../utils/colors';
 // import PropTypes from 'prop-types';
 // import { colors } from '../../utils/colors';
 import { gallery } from '../../utils/gallery';
+import '@reach/dialog/styles.css';
 
 const images = ctg =>
   gallery.filter(item => item.category === ctg).map(item => item.path);
@@ -33,26 +36,84 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const GalleryImages = ({ activeCategory }) => (
-  <StyledImages>
-    {images(activeCategory).map(image => {
-      return (
-        <Column nopadd key={image} xs="12" sm="6" md="3">
-          <StyledImagesItem>
-            <Image src={image} alt="zachód słońca nad jeziorem" />
-          </StyledImagesItem>
-        </Column>
-      );
-    })}
-  </StyledImages>
-);
+const Button = styled.button`
+  position: absolute;
+  top: -21px;
+  right: -21px;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 600;
+  border: 2px ${colors.primary} solid;
+  padding: 0.3rem 0.7rem;
+  border-radius: 1.2rem;
+  background-color: ${props => (props.secondary ? '#fff' : colors.primary)};
+  color: ${props => (props.secondary ? colors.primary : colors.white)};
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
-//   GalleryImages.propTypes = {
-//     wichCategoryImage: PropTypes.string,
-//   };
+  :hover {
+    background-color: ${props =>
+      props.secondary ? colors.primary : colors.secondary};
+    border-color: ${props =>
+      props.secondary ? colors.primary : colors.secondary};
+    color: ${colors.white};
+  }
+`;
 
-//   GalleryImages.defaultProps = {
-//     wichCategoryImage: 'Widoki',
-//   };
+// eslint-disable-next-line react/prefer-stateless-function
+export default class GalleryImages extends Component {
+  constructor(props) {
+    super(props);
 
-export default GalleryImages;
+    this.state = {
+      showLightbox: false,
+      selectedImage: null,
+    };
+  }
+
+  render() {
+    const { activeCategory } = this.props;
+    const { selectedImage, showLightbox } = this.state;
+    return (
+      <StyledImages>
+        {images(activeCategory).map(image => {
+          return (
+            <Column nopadd key={image} xs="12" sm="6" md="3">
+              <StyledImagesItem
+                className="gallery-button"
+                type="button"
+                onClick={() =>
+                  this.setState({ showLightbox: true, selectedImage: image })
+                }
+              >
+                <Image src={image} alt="zachód słońca nad jeziorem" />
+              </StyledImagesItem>
+            </Column>
+          );
+        })}
+        {showLightbox && (
+          <Dialog>
+            <Button
+              secondary
+              type="button"
+              onClick={() => this.setState({ showLightbox: false })}
+            >
+              X
+            </Button>
+            <Image src={selectedImage} alt="zachód słońca nad jeziorem" />
+          </Dialog>
+        )}
+      </StyledImages>
+    );
+  }
+
+  //   GalleryImages.propTypes = {
+  //     wichCategoryImage: PropTypes.string,
+  //   };
+
+  //   GalleryImages.defaultProps = {
+  //     wichCategoryImage: 'Widoki',
+  //   };
+}

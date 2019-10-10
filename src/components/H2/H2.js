@@ -15,7 +15,7 @@ const H2 = styled.h2`
     position: absolute;
     width: 60px;
     height: 2px;
-    background-color: ${props => (props.white ? colors.dark : colors.primaty)};
+    background-color: ${props => (props.white ? colors.dark : colors.primary)};
     top: 45px;
   }
 `;

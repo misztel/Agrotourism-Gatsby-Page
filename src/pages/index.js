@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 import Layout from '../layout/Layout';
 import H1 from '../components/H1/H1';
 import H2 from '../components/H2/H2';
@@ -9,7 +11,13 @@ import Column from '../components/Column/Column';
 import Paragraph from '../components/Paragraph/Paragraph';
 import Container from '../components/Container/Container';
 import Widok from '../assets/images/widok.jpg';
+import Widok2 from '../assets/images/widok2.jpg';
 import Footer from '../components/Footer/Footer';
+
+const StyledTest = styled.div`
+  width: 100%;
+  display: block;
+`;
 
 const IndexPage = () => (
   <>
@@ -24,41 +32,51 @@ const IndexPage = () => (
               miejscu na skraju Borów Tucholskich. Położone przy jeziorze
               Świekatowskim z wieloma atrakcjami na naszym terenie i w okolicy.
             </Paragraph>
-            <Button>O Nas</Button>
+            <Link to="/onas">
+              <Button>O Nas</Button>
+            </Link>
           </Column>
         </Container>
       </Row>
     </Layout>
     <Row>
       <Container addmarg>
-        <Column xs="12" sm="12" md="6" lg="6">
-          <img src={Widok} alt="zachód słońca nad jeziorem" />
-        </Column>
-        <Column xs="12" sm="12" md="6" lg="6">
-          <H2>Zacisze Nad Wodą</H2>
-          <Paragraph dark>
-            Nasze gospodarstwo agroturystyczne znajduję się w urokliwym miejscu
-            na skraju Borów Tucholskich. Położone przy jeziorze Świekatowskim z
-            wieloma atrakcjami na naszym terenie i w okolicy.
-          </Paragraph>
-          <Button secondary>Więcej</Button>
-        </Column>
+        <StyledTest>
+          <Column xs="12" sm="12" md="5" lg="5">
+            <img src={Widok} alt="Zachód słońca nad jeziorem" />
+          </Column>
+          <Column xs="12" sm="12" md="6" lg="6" marg>
+            <H2>O nas</H2>
+            <Paragraph dark>
+              Nasze gospodarstwo agroturystyczne znajduje się w gminie i wsi
+              Świekatowo. Gospodarstwo położone jest w malowniczej scenerii na
+              skraju Borów Tucholskich i w pobliżu dużego jeziora
+              Świekatowskiego, bogatego w różne gatunki ryb.
+            </Paragraph>
+            <Link to="/onas">
+              <Button secondary>Więcej</Button>
+            </Link>
+          </Column>
+        </StyledTest>
       </Container>
     </Row>
     <Row>
       <Container addmarg>
-        <Column xs="12" sm="12" md="6" lg="6">
-          <H2>Zacisze Nad Wodą</H2>
-          <Paragraph dark>
-            Nasze gospodarstwo agroturystyczne znajduję się w urokliwym miejscu
-            na skraju Borów Tucholskich. Położone przy jeziorze Świekatowskim z
-            wieloma atrakcjami na naszym terenie i w okolicy.
-          </Paragraph>
-          <Button secondary>Więcej</Button>
-        </Column>
-        <Column xs="12" sm="12" md="6" lg="6">
-          <img src={Widok} alt="zachód słońca nad jeziorem" />
-        </Column>
+        <StyledTest>
+          <Column xs="12" sm="12" md="6" lg="6">
+            <H2>Okolica</H2>
+            <Paragraph dark>
+              Nasze gospodarstwo położone jest na skraju Borów Tucholskich,
+              teren rozciąga się nad samym brzegiem jeziora. Ponadto w okolicy
+              warto zobaczyć stare miasto Chełmno, klasztor w Busławiu, Muzeum
+              Borów Tucholskich w Tucholi, Zamek Krzyżaków w Świeciu czy ścieżki
+              dydaktyczne w Wozikowie.
+            </Paragraph>
+          </Column>
+          <Column xs="12" sm="12" md="5" lg="5" marg>
+            <img src={Widok2} alt="Piękn widok z pomostu" />
+          </Column>
+        </StyledTest>
       </Container>
     </Row>
     <Footer />

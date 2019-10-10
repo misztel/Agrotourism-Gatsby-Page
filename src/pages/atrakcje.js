@@ -6,9 +6,9 @@ import SubPageLayout from '../layout/SubPage';
 import Header from '../components/Header/Header';
 import Row from '../components/Row/Row';
 import Column from '../components/Column/Column';
-// import Paragraph from '../components/Paragraph/Paragraph';
+import Paragraph from '../components/Paragraph/Paragraph';
 import Container from '../components/Container/Container';
-import Gallery from '../components/Galeria/Galeria';
+import Footer from '../components/Footer/Footer';
 
 const AtrakcjePage = () => (
   <>
@@ -22,7 +22,43 @@ const AtrakcjePage = () => (
         </Container>
       </Row>
     </SubPageLayout>
-    <Gallery />
+    <Row>
+      <Container addmarg>
+        <Column nopadd xs="12">
+          <Paragraph dark>
+            Dla naszych Gości mamy wiele atrakcji zarówno dla osób chcących
+            aktywnie spędzać czas oraz dla takich którzy potrzebują wyciszenia.
+            Położenie oraz dostępne sprzęty pozwolą Państwu na udane spędzenie
+            wolnego czasu.
+          </Paragraph>
+        </Column>
+      </Container>
+    </Row>
+    <Row>
+      <Container>
+        <Column className="atrakcje" nopadd md="6" xs="12">
+          <ul>
+            <li>sala z piłkarzykami, bilardem, ping-pongiem, </li>
+            <li>boiska do siatkówki, piłki nożnej, piłki plażowej</li>
+            <li>pomost dla wędkarzy</li>
+            <li>łowienie i wędzenie ryb</li>
+            <li>biesiada przy ognisku z kiełbaskami i karkówką</li>
+            <li>plac zabaw dla dzieci</li>
+          </ul>
+        </Column>
+        <Column className="atrakcje" nopadd md="6" xs="12">
+          <ul>
+            <li>korzystanie ze sprzętu wodnego (łódka, rower, kajak)</li>
+            <li>boiska do siatkówki, piłki nożnej, piłki plażowej</li>
+            <li>pomost dla wędkarzy</li>
+            <li>łowienie i wędzenie ryb</li>
+            <li>biesiada przy ognisku z kiełbaskami i karkówką</li>
+            <li>plac zabaw dla dzieci</li>
+          </ul>
+        </Column>
+      </Container>
+    </Row>
+    <Footer />
   </>
 );
 

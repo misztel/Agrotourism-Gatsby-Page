@@ -8,6 +8,7 @@ import Container from '../Container/Container';
 import GalleryImages from './Images';
 import { colors } from '../../utils/colors';
 import { gallery } from '../../utils/gallery';
+import Footer from '../Footer/Footer';
 
 const categories = gallery.map(item => {
   return item.category;
@@ -83,6 +84,7 @@ const Gallery = () => {
           <GalleryImages activeCategory={categoryx} />
         </Container>
       </Row>
+      <Footer />
     </>
   );
 };

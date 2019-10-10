@@ -12,15 +12,18 @@ const Column = styled.div`
   float: left;
   ${({ xs }) => (xs ? getWidth(xs) : 'width: 100%;')}
   padding: ${props => (props.nopadd ? '0px' : '0px 15px')};
-
+  
   @media (min-width: 768px) {
     ${({ sm }) => sm && getWidth(sm)}
+    margin: 0;
   }
   @media (min-width: 992px) {
     ${({ md }) => md && getWidth(md)}
+    margin: ${props => (props.marg ? '0 0 0 8.3333%' : '0')};
   }
   @media (min-width: 1200px) {
     ${({ lg }) => lg && getWidth(lg)}
+    margin: ${props => (props.marg ? '0 0 0 8.3333%' : '0')};
   }
 `;
 

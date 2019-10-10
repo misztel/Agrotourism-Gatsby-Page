@@ -29,7 +29,7 @@ const Header = () => {
     <StyledWrapper>
       <Row>
         <Container push>
-          <Column xs="4" md="3">
+          <Column xs="6" md="3">
             <Logo />
           </Column>
           <Column xs="1" md="9">

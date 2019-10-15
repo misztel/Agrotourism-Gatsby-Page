@@ -33,14 +33,28 @@ box-sizing: border-box;
 .gallery-button{
     cursor: pointer;
 }
+[data-reach-dialog-overlay]{
+  
+}
+
 [data-reach-dialog-content] {
-    width: 50vw;
-    margin: 10vh auto;
+    max-width: 80vw;
+    width: auto!important;
+    max-height: 75vh;
+    margin: 15vh auto!important;
     background: white;
     padding: 1rem!important;
     outline: none;
     position: relative;
+    display: flex;
+    border: solid 1px #fff;
+    border-radius: 10px;
+
   }
+[data-reach-dialog-content] img{
+  object-fit: contain;
+}
+
   .copy{
     color: #000;
     display: flex;

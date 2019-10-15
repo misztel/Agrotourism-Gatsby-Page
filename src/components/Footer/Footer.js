@@ -21,6 +21,7 @@ import Logo from '../Logo/Logo';
 
 const StyledWrapper = styled.div`
   background-color: ${colors.primary};
+  margin-top: 60px;
 `;
 
 const StyledCopy = styled.div`
@@ -40,7 +41,7 @@ const Footer = () => (
     </Row>
     <Row>
       <Container>
-        <Column xs="12" md="4">
+        <Column xs="12" sm="12" md="4" lg="4">
           <div className="daneblock">
             <div className="daneinner">
               <Logo className="logo-ft" />
@@ -63,7 +64,7 @@ const Footer = () => (
           </div>
         </Column>
 
-        <Column xs="12" md="4">
+        <Column xs="12" sm="12" md="4" lg="4">
           <div className="daneblock">
             <div className="daneinner">
               <FontAwesomeIcon icon={faEnvelope} className="icon fa-fw" />
@@ -86,7 +87,7 @@ const Footer = () => (
           </div>
         </Column>
 
-        <Column xs="12" md="4">
+        <Column xs="12" sm="12" md="4" lg="4">
           <div className="daneblock">
             <Paragraph center>
               {' '}

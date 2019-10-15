@@ -31,6 +31,11 @@ const StyledTableCell = styled.td`
   }
 `;
 
+const StyledTest = styled.div`
+  width: 100%;
+  display: block;
+`;
+
 const Pricing = () => (
   <StyledWrapper>
     <Row>
@@ -42,35 +47,36 @@ const Pricing = () => (
     </Row>
     <Row>
       <Container>
-        <Column xs="12" sm="12" md="2" lg="2" />
-        <Column xs="12" sm="12" md="8" lg="8">
-          <StyledTable>
-            <tbody>
-              <tr>
-                <StyledTableCell>
-                  {' '}
-                  osoba dorosła/doba (pobyt 1-2 doby){' '}
-                </StyledTableCell>
-                <StyledTableCell> 40 zł </StyledTableCell>
-              </tr>
-              <tr>
-                <StyledTableCell>
-                  {' '}
-                  osoba dorosła/doba (pobyt powyżej dwóch dób){' '}
-                </StyledTableCell>
-                <StyledTableCell> 35 zł </StyledTableCell>
-              </tr>
-              <tr>
-                <StyledTableCell> dzieci do lat 7/doba </StyledTableCell>
-                <StyledTableCell> 17 zł </StyledTableCell>
-              </tr>
-              <tr>
-                <StyledTableCell> dzieci do lat 2/doba </StyledTableCell>
-                <StyledTableCell> 8 zł </StyledTableCell>
-              </tr>
-            </tbody>
-          </StyledTable>
-        </Column>
+        <StyledTest>
+          <Column sm="12" md="10" marg>
+            <StyledTable>
+              <tbody>
+                <tr>
+                  <StyledTableCell>
+                    {' '}
+                    osoba dorosła/doba (pobyt 1-2 doby){' '}
+                  </StyledTableCell>
+                  <StyledTableCell> 40 zł </StyledTableCell>
+                </tr>
+                <tr>
+                  <StyledTableCell>
+                    {' '}
+                    osoba dorosła/doba (pobyt powyżej dwóch dób){' '}
+                  </StyledTableCell>
+                  <StyledTableCell> 35 zł </StyledTableCell>
+                </tr>
+                <tr>
+                  <StyledTableCell> dzieci do lat 7/doba </StyledTableCell>
+                  <StyledTableCell> 17 zł </StyledTableCell>
+                </tr>
+                <tr>
+                  <StyledTableCell> dzieci do lat 2/doba </StyledTableCell>
+                  <StyledTableCell> 8 zł </StyledTableCell>
+                </tr>
+              </tbody>
+            </StyledTable>
+          </Column>
+        </StyledTest>
       </Container>
     </Row>
     <Row>
@@ -82,21 +88,22 @@ const Pricing = () => (
     </Row>
     <Row>
       <Container>
-        <Column xs="12" sm="12" md="2" lg="2" />
-        <Column xs="12" sm="12" md="8" lg="8">
-          <StyledTable>
-            <tbody>
-              <tr>
-                <StyledTableCell> osoba dorosła </StyledTableCell>
-                <StyledTableCell> 20 zł </StyledTableCell>
-              </tr>
-              <tr>
-                <StyledTableCell> dzieci do lat 7 </StyledTableCell>
-                <StyledTableCell> 7,50 zł </StyledTableCell>
-              </tr>
-            </tbody>
-          </StyledTable>
-        </Column>
+        <StyledTest>
+          <Column sm="12" md="10" marg>
+            <StyledTable>
+              <tbody>
+                <tr>
+                  <StyledTableCell> osoba dorosła </StyledTableCell>
+                  <StyledTableCell> 20 zł </StyledTableCell>
+                </tr>
+                <tr>
+                  <StyledTableCell> dzieci do lat 7 </StyledTableCell>
+                  <StyledTableCell> 7,50 zł </StyledTableCell>
+                </tr>
+              </tbody>
+            </StyledTable>
+          </Column>
+        </StyledTest>
       </Container>
     </Row>
     <Row>
@@ -108,21 +115,22 @@ const Pricing = () => (
     </Row>
     <Row>
       <Container>
-        <Column xs="12" sm="12" md="2" lg="2" />
-        <Column xs="12" sm="12" md="8" lg="8">
-          <StyledTable>
-            <tbody>
-              <tr>
-                <StyledTableCell> osoba dorosła </StyledTableCell>
-                <StyledTableCell> 14 zł </StyledTableCell>
-              </tr>
-              <tr>
-                <StyledTableCell> dzieci do lat 7 </StyledTableCell>
-                <StyledTableCell> 7 zł </StyledTableCell>
-              </tr>
-            </tbody>
-          </StyledTable>
-        </Column>
+        <StyledTest>
+          <Column sm="12" md="10" marg>
+            <StyledTable>
+              <tbody>
+                <tr>
+                  <StyledTableCell> osoba dorosła </StyledTableCell>
+                  <StyledTableCell> 14 zł </StyledTableCell>
+                </tr>
+                <tr>
+                  <StyledTableCell> dzieci do lat 7 </StyledTableCell>
+                  <StyledTableCell> 7 zł </StyledTableCell>
+                </tr>
+              </tbody>
+            </StyledTable>
+          </Column>
+        </StyledTest>
       </Container>
     </Row>
     <Row>
@@ -134,24 +142,24 @@ const Pricing = () => (
     </Row>
     <Row>
       <Container>
-        <Column xs="12" sm="12" md="2" lg="2" />
-        <Column xs="12" sm="12" md="8" lg="8">
-          <StyledTable>
-            <tbody>
-              <tr>
-                <StyledTableCell>
-                  {' '}
-                  osoba dorosła/doba (pobyt 1-2 doby){' '}
-                </StyledTableCell>
-                <StyledTableCell> 14 zł </StyledTableCell>
-              </tr>
-              <tr>
-                <StyledTableCell> dzieci do lat 7 </StyledTableCell>
-                <StyledTableCell> 7 zł </StyledTableCell>
-              </tr>
-            </tbody>
-          </StyledTable>
-        </Column>
+        <StyledTest>
+          <Column sm="12" md="10" marg>
+            <StyledTable>
+              <tbody>
+                <tr>
+                  <StyledTableCell>
+                    osoba dorosła/doba (pobyt 1-2 doby)
+                  </StyledTableCell>
+                  <StyledTableCell> 14 zł </StyledTableCell>
+                </tr>
+                <tr>
+                  <StyledTableCell> dzieci do lat 7 </StyledTableCell>
+                  <StyledTableCell> 7 zł </StyledTableCell>
+                </tr>
+              </tbody>
+            </StyledTable>
+          </Column>
+        </StyledTest>
       </Container>
     </Row>
   </StyledWrapper>

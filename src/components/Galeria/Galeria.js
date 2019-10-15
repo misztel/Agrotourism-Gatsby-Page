@@ -9,6 +9,7 @@ import GalleryImages from './Images';
 import { colors } from '../../utils/colors';
 import { gallery } from '../../utils/gallery';
 import Footer from '../Footer/Footer';
+import Kontakt from '../Footer/Kontakt';
 
 const categories = gallery.map(item => {
   return item.category;
@@ -20,8 +21,13 @@ const categoriesUnique = categories.filter((item, index) => {
 const StyledCategories = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
   margin: 20px 0px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledCategoriesLink = styled.div`
@@ -84,6 +90,7 @@ const Gallery = () => {
           <GalleryImages activeCategory={categoryx} />
         </Container>
       </Row>
+      <Kontakt />
       <Footer />
     </>
   );

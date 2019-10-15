@@ -1,104 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faEnvelope,
-  faPhone,
-  faMobileAlt,
-  faHome,
-  faMailBulk,
-} from '@fortawesome/free-solid-svg-icons';
-// import H1 from '../components/H1/H1';
-import H2 from '../H2/H2';
-// import Button from '../components/Button/Button';
 import Row from '../Row/Row';
 import Column from '../Column/Column';
-// import Paragraph from '../components/Paragraph/Paragraph';
 import Container from '../Container/Container';
 import { colors } from '../../utils/colors';
 import Paragraph from '../Paragraph/Paragraph';
-import Logo from '../Logo/Logo';
 
 const StyledWrapper = styled.div`
   background-color: ${colors.primary};
-  margin-top: 60px;
 `;
 
 const StyledCopy = styled.div`
   background-color: ${colors.white};
 `;
+const StyledTest = styled.div`
+  width: 100%;
+  display: block;
+`;
 
 const Footer = () => (
   <StyledWrapper>
-    <Row>
-      <Container push>
-        <Column xs="12">
-          <H2 white centred>
-            Kontakt
-          </H2>
-        </Column>
-      </Container>
-    </Row>
-    <Row>
-      <Container>
-        <Column xs="12" sm="12" md="4" lg="4">
-          <div className="daneblock">
-            <div className="daneinner">
-              <Logo className="logo-ft" />
-            </div>
-          </div>
-          <div className="daneblock">
-            <div className="daneinner">
-              <FontAwesomeIcon icon={faHome} className="icon fa-fw" />
-              <Paragraph className="textset">
-                {' '}
-                ul. Bohaterów Września 25
-              </Paragraph>
-            </div>
-          </div>
-          <div className="daneblock">
-            <div className="daneinner">
-              <FontAwesomeIcon icon={faMailBulk} className="icon fa-fw" />
-              <Paragraph className="textset">86-182 Świekatowo</Paragraph>
-            </div>
-          </div>
-        </Column>
-
-        <Column xs="12" sm="12" md="4" lg="4">
-          <div className="daneblock">
-            <div className="daneinner">
-              <FontAwesomeIcon icon={faEnvelope} className="icon fa-fw" />
-              <Paragraph className="textset">
-                agroturystyka.jaroch@o2.pl
-              </Paragraph>
-            </div>
-          </div>
-          <div className="daneblock">
-            <div className="daneinner">
-              <FontAwesomeIcon icon={faPhone} className="icon fa-fw" />
-              <Paragraph className="textset">052 332 20 23</Paragraph>
-            </div>
-          </div>
-          <div className="daneblock">
-            <div className="daneinner">
-              <FontAwesomeIcon icon={faMobileAlt} className="icon fa-fw" />
-              <Paragraph className="textset"> 699 365 557</Paragraph>
-            </div>
-          </div>
-        </Column>
-
-        <Column xs="12" sm="12" md="4" lg="4">
-          <div className="daneblock">
-            <Paragraph center>
-              {' '}
-              Numer rachunku bankowego: <br />
-              Bank Spółdzielczy BGŻ <br />
-              89 8168 0007 0009 3611 2000 0012
-            </Paragraph>
-          </div>
-        </Column>
-      </Container>
-    </Row>
     <iframe
       className="map"
       title="map"
@@ -111,28 +32,25 @@ const Footer = () => (
     <StyledCopy>
       <Row>
         <Container>
-          <Column xs="12" md="12" className="copy">
-            <Paragraph dark x16>
-              Copyright © 2019 |{' '}
-              <a
-                href="http://mmisztela.pl"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Polityka Prywatności
-              </a>{' '}
-            </Paragraph>
-            <Paragraph dark x16>
-              Created by{' '}
-              <a
-                href="http://mmisztela.pl"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                mmisztela.pl
-              </a>
-            </Paragraph>
-          </Column>
+          <StyledTest>
+            <Column xs="12" sm="6" className="copy">
+              <Paragraph dark x16>
+                Copyright © 2019
+              </Paragraph>
+            </Column>
+            <Column xs="12" sm="6" className="copy right">
+              <Paragraph dark x16>
+                Created by{' '}
+                <a
+                  href="http://mmisztela.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  mmisztela.pl
+                </a>
+              </Paragraph>
+            </Column>
+          </StyledTest>
         </Container>
       </Row>
     </StyledCopy>

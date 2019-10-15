@@ -8,7 +8,7 @@ const Button = styled.button`
   border: 2px ${colors.primary} solid;
   padding: 0.25rem 0.95rem;
   border-radius: 1.2rem;
-  margin: 0 0 2rem 0;
+  margin: 1rem 0 2rem 0;
   background-color: ${props =>
     props.secondary ? 'transparent' : colors.primary};
   color: ${props => (props.secondary ? colors.primary : colors.white)};

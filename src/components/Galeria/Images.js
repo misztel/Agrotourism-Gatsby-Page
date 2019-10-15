@@ -80,7 +80,7 @@ export default class GalleryImages extends Component {
       <StyledImages>
         {images(activeCategory).map(image => {
           return (
-            <Column nopadd key={image} xs="12" sm="6" md="3">
+            <Column nopadd key={image} xxs="12" xs="6" sm="4" md="3">
               <StyledImagesItem
                 className="gallery-button"
                 type="button"

@@ -28,11 +28,11 @@ const Header = () => {
   return (
     <StyledWrapper>
       <Row>
-        <Container push>
+        <Container push wide>
           <Column xs="6" md="3">
             <Logo />
           </Column>
-          <Column xs="1" md="9">
+          <Column xxs="1" xs="1" md="9">
             <MenuDesktop />
             <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
             <Menu isOpen={isMenuOpen} />

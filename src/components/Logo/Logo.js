@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { colors } from '../../utils/colors';
 
-
 const StyledLogo = styled.div`
-  font-size: 1.3em;
+  font-size: 1.3rem;
   color: ${colors.white};
-  z-index: 9999;
   font-family: 'Courgette', cursive;
   padding: 20px 0;
 `;
@@ -20,6 +18,10 @@ const StyledLinkNav = styled(props => <Link {...props} />)`
   }
 `;
 
-const Logo = () => <StyledLogo><StyledLinkNav to="/"> Zacisze Nad Wodą</StyledLinkNav></StyledLogo>;
+const Logo = () => (
+  <StyledLogo>
+    <StyledLinkNav to="/"> Zacisze Nad Wodą</StyledLinkNav>
+  </StyledLogo>
+);
 
 export default Logo;

@@ -4,12 +4,14 @@ import SubPageLayout from '../layout/SubPage';
 // import H2 from '../components/H2/H2';
 // import Button from '../components/Button/Button';
 import Header from '../components/Header/Header';
+import Wrapper from '../components/Wrapper/Wrapper';
 import Row from '../components/Row/Row';
 import Column from '../components/Column/Column';
 // import Paragraph from '../components/Paragraph/Paragraph';
 import Container from '../components/Container/Container';
 import Pricing from '../components/Pricing/Pricing';
 import Footer from '../components/Footer/Footer';
+import Kontakt from '../components/Footer/Kontakt';
 
 const CennikPage = () => (
   <>
@@ -23,7 +25,10 @@ const CennikPage = () => (
         </Container>
       </Row>
     </SubPageLayout>
-    <Pricing />
+    <Wrapper>
+      <Pricing />
+    </Wrapper>
+    <Kontakt />
     <Footer />
   </>
 );
